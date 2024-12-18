@@ -1,4 +1,4 @@
-# Neural Network Visualization with NNFS 🌐
+# Neural Network From scratch using python 🌐
 
 This repository contains a Python implementation of a simple neural network using the `nnfs` library. The purpose of this project is to demonstrate the fundamentals of neural network operations including layer initialization, activation functions, and loss calculations, along with data visualization using `matplotlib`.
 
