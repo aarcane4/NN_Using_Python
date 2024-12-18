@@ -1,0 +1,36 @@
+digraph {
+	subgraph cluster_input {
+		color=white
+		"Input 1" [color=lightblue shape=circle style=filled]
+		"Input 2" [color=lightblue shape=circle style=filled]
+	}
+	subgraph cluster_1 {
+		color=white
+		label="Layer 1: Dense with ReLU"
+		Dense1_Neuron1 [color=lightgrey shape=circle style=filled]
+		Dense1_Neuron2 [color=lightgrey shape=circle style=filled]
+		Dense1_Neuron3 [color=lightgrey shape=circle style=filled]
+	}
+	subgraph cluster_2 {
+		color=white
+		label="Layer 2: Dense with Softmax"
+		Dense2_Neuron1 [color=lightgreen shape=circle style=filled]
+		Dense2_Neuron2 [color=lightgreen shape=circle style=filled]
+		Dense2_Neuron3 [color=lightgreen shape=circle style=filled]
+	}
+	"Input 1" -> Dense1_Neuron1
+	"Input 1" -> Dense1_Neuron2
+	"Input 1" -> Dense1_Neuron3
+	"Input 2" -> Dense1_Neuron1
+	"Input 2" -> Dense1_Neuron2
+	"Input 2" -> Dense1_Neuron3
+	Dense1_Neuron1 -> Dense2_Neuron1
+	Dense1_Neuron1 -> Dense2_Neuron2
+	Dense1_Neuron1 -> Dense2_Neuron3
+	Dense1_Neuron2 -> Dense2_Neuron1
+	Dense1_Neuron2 -> Dense2_Neuron2
+	Dense1_Neuron2 -> Dense2_Neuron3
+	Dense1_Neuron3 -> Dense2_Neuron1
+	Dense1_Neuron3 -> Dense2_Neuron2
+	Dense1_Neuron3 -> Dense2_Neuron3
+}
